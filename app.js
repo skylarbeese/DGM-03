@@ -12,12 +12,12 @@ console.log(`this is the number ${correctNum}`)
 function elv() {
   
   totalGuesses += 1
-  gamerGuess = document.querySelector('guess')
+  gamerGuess = document.querySelector('guess').value
   const feedBack = document.querySelector('feedback')
   console.log(totalGuesses, gamerGuess)
- /*if(gamerGuesses == correctNum) {
+ if(gamerGuesses == correctNum) {
      console.log('the number is correct')
  } else {
     console.log('the number is not correct')
- } */
+ } 
 }
