@@ -13,9 +13,9 @@ function elv() {
   
   totalGuesses += 1
   gamerGuess = document.querySelector('guess').value
-  const feedBack = document.querySelector('feedback')
+ 
   console.log(totalGuesses, gamerGuess)
- let  feedback = document.querySelector('.feedback')
+const  feedback = document.querySelector('.feedback')
  if(gamerGuesses == correctNum) {
   feedback.innerText = 'the number is correct'
   giveAward()
@@ -49,8 +49,8 @@ function giveAward() {
       break;
  
   }
-  riddons = document.querySelector('ribbons"')
- awardImg = document.createElement('img')
+ const riddons = document.querySelector('ribbons"')
+ const awardImg = document.createElement('img')
  awardImg.setAttribute('src', imgPath)
  riddons.appendChild(awardImg)
 }
