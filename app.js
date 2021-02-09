@@ -33,4 +33,24 @@ document.querySelector('#attempts').innerText = totalGuesses
 
 function giveAward() {
   console.log('you win')
+  let imgPath = '#'
+  switch(totalGuesses) {
+    case 1:
+    case 2:
+    case 3:
+      console.log('you get a blue ribbon')
+      imgPath = ''
+      break;
+    case 4:
+    case 5:
+    case 6:
+      console.log(' case 4')
+      imgPath = ''
+      break;
+ 
+  }
+  riddons = document.querySelector('ribbons"')
+ awardImg = document.createElement('img')
+ awardImg.setAttribute('src', imgPath)
+ riddons.appendChild(awardImg)
 }
