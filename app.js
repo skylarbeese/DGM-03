@@ -15,9 +15,22 @@ function elv() {
   gamerGuess = document.querySelector('guess').value
   const feedBack = document.querySelector('feedback')
   console.log(totalGuesses, gamerGuess)
+ let  feedback = document.querySelector('.feedback')
  if(gamerGuesses == correctNum) {
-     console.log('the number is correct')
- } else {
-    console.log('the number is not correct')
- } 
+  feedback.innerText = 'the number is correct'
+  giveAward()
+ } else if(gamerGuess > correctNum && gamerGuess < 16) {
+    feedback.innerText = 'the number is to high'
+ }  else if(gamerGuess < correctNum && gamerGuess > 0) {
+  feedback.innerText = 'the number is to low'
+} else {
+  feedback.innerText = 'choose a number betwwen 1 and 16 and try agien'
+  totalGuesses -= 1
+}
+
+document.querySelector('#attempts').innerText = totalGuesses
+}
+
+function giveAward() {
+  console.log('you win')
 }
