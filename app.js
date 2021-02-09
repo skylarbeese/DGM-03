@@ -39,13 +39,13 @@ function giveAward() {
     case 2:
     case 3:
       console.log('you get a blue ribbon')
-      imgPath = ''
+      imgPath = 'img/gold.jpg'
       break;
     case 4:
     case 5:
     case 6:
       console.log(' case 4')
-      imgPath = ''
+      imgPath = 'img/blue.jpg'
       break;
  
   }
