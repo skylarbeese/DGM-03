@@ -4,7 +4,7 @@ let correctNum = Math.floor(Math.random() * 15)
 
 let guessed = false
 let totalGuesses = 0
-let gamerGuess = 0
+let gamerGuesses = 0
 correctNum += 1
 
 console.log(`this is the number ${correctNum}`)
@@ -12,11 +12,11 @@ console.log(`this is the number ${correctNum}`)
 function elv() {
   
   totalGuesses += 1
-  gamerGuess = document.querySelector('guess').value
+  gamerGuess = document.querySelector('.guess').value
  
-  console.log(totalGuesses, gamerGuess)
+  console.log(totalGuesses, gamerGuess, correctNum)
 const  feedback = document.querySelector('.feedback')
- if(gamerGuesses == correctNum) {
+ if(gamerGuess == correctNum) {
   feedback.innerText = 'the number is correct'
   giveAward()
  } else if(gamerGuess > correctNum && gamerGuess < 16) {
@@ -33,7 +33,7 @@ document.querySelector('#attempts').innerText = totalGuesses
 
 function giveAward() {
   console.log('you win')
-  let imgPath = '#'
+  let imgPath
   switch(totalGuesses) {
     case 1:
     case 2:
@@ -49,7 +49,7 @@ function giveAward() {
       break;
  
   }
- const riddons = document.querySelector('ribbons"')
+ const riddons = document.querySelector('.ribbons')
  const awardImg = document.createElement('img')
  awardImg.setAttribute('src', imgPath)
  riddons.appendChild(awardImg)

@@ -70,3 +70,7 @@ footer {
 footer p {
     font-size: 1.3rem;
 }
+.ribbons img{
+   width: 60px;
+   height: 60px;
+}
